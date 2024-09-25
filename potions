@@ -1,0 +1,10 @@
+n = int(input())
+l = [int(a) for a in input().split()]
+x=[]
+for a in l:
+    x.append(a)
+    x.sort()
+    if(sum(x)<0):
+        x.pop(0)
+        
+print(len(x))

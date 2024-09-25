@@ -1,0 +1,23 @@
+for _ in range(int(input())):
+    
+    lt = 1
+    ls = 1
+    tt = False
+    ts = False
+    for _ in range(int(input())):
+        d , k , x = input().split()
+        for c in x:
+            if(d=="1"):
+                ls+=int(k) 
+                if(c !="a"):
+                    ts = True 
+            else:
+                lt+=int(k)
+                if(c!='a'):
+                    tt = True
+            
+        if(tt):
+            print("YES")
+        else:
+            print("YES" if (lt>ls and not ts) else "NO")
+        
